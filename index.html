@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-	<script src="js/app.js"></script>
+	<script src="jquery-2.2.4.js"></script>
+	<script src="app.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+	<link rel="stylesheet" href="style.css">
 	<meta charset="UTF-8">
 	<title>Quiz</title>
-	<link rel="stylesheet" href="css/style.css"></link>
+	<!-- <link rel="stylesheet" href="css/style.css"></link> -->
 </head>
 <body>
 	<div class="container">
@@ -22,10 +23,35 @@
 		      </div>
 		    </div>
 		  </nav>
-			<div class="divider"></div>
-		  <div class="section">
-		    <h5>Introduction</h5>
+			<div class="section0 invis">
+				<h5>Introduction</h5>
 		    <p>Welcome to our Physics quiz! You will be asked five questions that will measure what you know about physics. For each question, select the correct answer and press the submit button. At the end of the quiz, we will give you a report card to let you know how well you did!</p>
+			</div>
+			<!-- <div class="divider"></div> -->
+		  <div class="section1 invis">
+		    
+				<div class="question1"></div>
+		    <ul></ul>
+		  </div>
+		  <!-- <div class="divider"></div> -->
+		  <div class="section2 invis">
+		  	<div class="question2"></div>
+		    <ul></ul>
+		  </div>
+		  <!-- <div class="divider"></div> -->
+		  <div class="section3 invis">
+		  	<div class="question3"></div>
+		    <ul></ul>
+		  </div>
+		  <!-- <div class="divider"></div> -->
+		  <div class="section4 invis">
+		  	<div class="question4"></div>
+		    <ul></ul>
+		  </div>
+		  <!-- <div class="divider"></div> -->
+		  <div class="section5 invis">
+		  	<div class="question5"></div>
+		    <ul></ul>
 		  </div>
 		  <!-- <div class="divider"></div>
 		  <div class="section">
@@ -37,8 +63,8 @@
 		    <h5>Section 3</h5>
     		<p>Stuff</p>
 			</div> -->
-			<a id="start"class="waves-effect waves-light btn-large">Start!</a>
-
+			<a id="next"class="waves-effect waves-light btn-large">next!</a>
+			
 
 			<!-- <div class="divider"></div> 
 			<div class="col s2 push-s10"><span class="flow-text">X / 5</span></div>

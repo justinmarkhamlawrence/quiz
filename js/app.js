@@ -1,8 +1,8 @@
 $(document).ready(function() {
-	var restart = function() {
+	
 		var q1 = [
 			"An object falls out of an airplane, and falls freely downward. Its"
-		, {
+		,  {
 			a: "mass increases", 
 			correct: false
 		}, {
@@ -69,7 +69,7 @@ $(document).ready(function() {
 		, {
 			a: "travels in a circle", 
 			correct: false
-		}, {
+		}, {                    
 			b: "falls in a straight line down to the earth",
 			correct: false
 		}, {
@@ -79,16 +79,54 @@ $(document).ready(function() {
 			d: "travels in a straight line horizontally away from you",
 			correct: true
 		}];
+		
+		var section = [$(".section0"), $("section1"), $("section2"), $("section3"), $("section4"), $("section5")];
+			$(".section0").css("display", "block")
+			var i = 1
+			var next = function() {
+				console.log(section[i]);
+				$(".section"+i).css("display", "block");
+				
+				i++;
+			}
 
-		$("#start").on("click", function(e) {
+		$("#next").on("click", function(e) {
+			console.log("hello");
 			e.preventDefault();
-			$(".section h5").hide();
-			$(".section p").hide();
-			$(".section").append("<p>" + q1[0] + "</p>");
-			$(".section").append("<p>" + q1[1] + "</p>");
-			console.log(q1[1]);
-			//$("#start").append("<p>" + (q1.a) + "</p>");
-		})
-	}
-	restart();
+			$(".invis").hide();
+			next();
+		});
+
+
+		
+
+		
+
+		
+		$(".question1").text(q1[0]);
+		$(".question2").text(q2[0]);
+		$(".question3").text(q3[0]);
+		$(".question4").text(q4[0]);
+		$(".question5").text(q5[0]);
+		for (var j = 1; j <= 5; j++) {
+					var key = Object.keys(q1[j])[0];
+					$(".section1 ul").append('<li><input name="q1"type="radio" id="test'+j+'" /><label for="test'+j+'">'+ q1[j][key] +'</label></li>');
+			
+					var key = Object.keys(q2[j])[0];
+					$(".section2 ul").append('<li><input name="q1"type="radio" id="test'+j+5+'" /><label for="test'+j+5+'">'+ q1[j][key] +'</label></li>');
+				
+					var key = Object.keys(q3[j])[0];
+					$(".section3 ul").append('<li><input name="q1"type="radio" id="test'+j+10+'" /><label for="test'+j+10+'">'+ q1[j][key] +'</label></li>');
+				
+					var key = Object.keys(q4[j])[0];
+					$(".section4 ul").append('<li><input name="q1"type="radio" id="test'+j+15+'" /><label for="test'+j+15+'">'+ q1[j][key] +'</label></li>');	
+				
+					var key = Object.keys(q5[j])[0];
+					$(".section5 ul").append('<li><input name="q1"type="radio" id="test'+j+20+'" /><label for="test'+j+20+'">'+ q1[j][key] +'</label></li>');
+				};
+					
+
+		
+		
+
 });
